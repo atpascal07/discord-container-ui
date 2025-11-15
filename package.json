@@ -1,6 +1,6 @@
 {
   "name": "discord-container-ui",
-  "version": "2.1.0",
+  "version": "2.1.1",
   "description": "Leichte Container-UI als TypeScript‑Bibliothek – kompatibel mit JS & TS. Enthält Container, TextDisplay, Section, Separator, MediaGallery & FileItem inkl. JSON-Serialisierung.",
   "author": "@pascal07_2025",
   "license": "MIT",
