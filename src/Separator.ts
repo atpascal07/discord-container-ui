@@ -2,10 +2,17 @@ import { Item } from "./Item";
 
 export enum SeparatorSpacingSize { small = "small", medium = "medium", large = "large" }
 
+export interface SeparatorOptions {
+  divider?: boolean;
+  spacing?: SeparatorSpacingSize;
+  id?: number | null;
+}
+
 export class Separator extends Item {
   divider: boolean;
   spacing: SeparatorSpacingSize;
-  constructor({divider=true, spacing=SeparatorSpacingSize.small, id}: {divider?: boolean, spacing?: SeparatorSpacingSize, id?: number|null} = {}) {
+
+  constructor({ divider = true, spacing = SeparatorSpacingSize.medium, id }: SeparatorOptions = {}) {
     super();
     this.divider = divider;
     this.spacing = spacing;
