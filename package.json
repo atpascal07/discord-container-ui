@@ -1,0 +1,26 @@
+{
+  "name": "discord-container-ui",
+  "version": "1.0.0",
+  "description": "Discord Container UI für discord.js – identisches Layout wie python-discord containers",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "module": "dist/index.mjs",
+  "type": "module",
+  "scripts": {
+    "build": "tsc",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [
+    "discord",
+    "discord.js",
+    "ui",
+    "container",
+    "statuspage"
+  ],
+  "dependencies": {
+    "discord.js": "^14.24.2"
+  },
+  "devDependencies": {
+    "typescript": "^5.9.3"
+  }
+}
