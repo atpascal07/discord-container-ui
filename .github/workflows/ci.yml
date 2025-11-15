@@ -1,31 +1,32 @@
-name: npm-publish-only
+name: Auto Publish to npm
 
 on:
   push:
-    tags: ['v*']          # publish nur bei Tags wie v0.1.0
-  workflow_dispatch:       # optional: manuell startbar
+    branches:
+      - main
+    paths:
+      - "package.json"
 
 jobs:
-  npm:
+  publish:
     runs-on: ubuntu-latest
-    permissions:
-      id-token: write      # für npm provenance
-      contents: read
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout repository
+        uses: actions/checkout@v4
 
-      - uses: actions/setup-node@v4
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
         with:
-          node-version: '20.x'
-          registry-url: 'https://registry.npmjs.org'
-          scope: '@pascal07_2025'
+          node-version: 20
+          registry-url: "https://registry.npmjs.org"
 
-      - run: npm ci
+      - name: Install dependencies
+        run: npm install
 
-      # npm@9 ist die letzte, die auf Node 20 für provenance stabil ist
-      - run: npm install -g npm@9
+      - name: Build (optional)
+        run: npm run build --if-present
 
-      # Publish (ohne Tests/Lints), Paket muss schon korrekt versioniert sein
-      - run: npm publish --access public --provenance
+      - name: Publish to npm
+        run: npm publish --access public
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
