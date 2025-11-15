@@ -20,7 +20,7 @@ jobs:
           registry-url: 'https://registry.npmjs.org'
           scope: '@pascal07_2025'
 
-      - run: npm ci
+     - run: npm install
 
       # npm@9 ist die letzte, die auf Node 20 für provenance stabil ist
       - run: npm install -g npm@9
