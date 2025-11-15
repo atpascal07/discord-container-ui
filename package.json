@@ -1,6 +1,6 @@
 {
   "name": "discord-container-ui",
-  "version": "2.0.1",
+  "version": "2.0.3",
   "description": "Full Discord.js Container UI – API identisch zur python-discord Container-Klasse (Container, TextDisplay, Section, File, MediaGallery, Separator, Items)",
   "author": "@pascal07_2025",
   "homepage": "https://github.com/atpascal07/discord-container-ui",
