@@ -1,7 +1,14 @@
 {
   "name": "discord-container-ui",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Discord Container UI für discord.js – identisches Layout wie python-discord containers",
+  "author": "@pascal07_2025",
+  "homepage": "https://github.com/atpascal07/discord-container-ui",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/atpascal07/discord-container-ui.git"
+  },
+  "license": "BSD-3-Clause",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "module": "dist/index.mjs",
