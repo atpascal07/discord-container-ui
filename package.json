@@ -1,12 +1,12 @@
 {
   "name": "discord-container-ui",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Discord Container UI für discord.js – identisches Layout wie python-discord containers",
   "author": "@pascal07_2025",
-  "homepage": "https://github.com/atpascal07/discord-container-ui",
+  "homepage": "https://github.com/Inn-Studios/DiscordContainerUI",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/atpascal07/discord-container-ui.git"
+    "url": "git+https://github.com/Inn-Studios/DiscordContainerUI.git"
   },
   "license": "BSD-3-Clause",
   "main": "dist/index.js",
@@ -29,5 +29,23 @@
   },
   "devDependencies": {
     "typescript": "^5.9.3"
+  },
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "require": "./dist/index.js",
+      "default": "./dist/index.js"
+    },
+    "./Container": {
+      "types": "./dist/Container.d.ts",
+      "require": "./dist/Container.js",
+      "default": "./dist/Container.js"
+    },
+    "./package.json": "./package.json"
+  },
+  "funding": "https://yourhoster.at",
+  "publishConfig": {
+    "access": "public",
+    "provenance": true
   }
 }
