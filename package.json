@@ -1,35 +1,47 @@
 {
   "name": "discord-container-ui",
-  "version": "1.0.2",
-  "description": "Discord Container UI für discord.js – identisches Layout wie python-discord containers",
+  "version": "2.0.1",
+  "description": "Full Discord.js Container UI – API identisch zur python-discord Container-Klasse (Container, TextDisplay, Section, File, MediaGallery, Separator, Items)",
   "author": "@pascal07_2025",
-  "homepage": "https://github.com/Inn-Studios/DiscordContainerUI",
+  "homepage": "https://github.com/atpascal07/discord-container-ui",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Inn-Studios/DiscordContainerUI.git"
+    "url": "git+https://github.com/atpascal07/discord-container-ui.git"
   },
   "license": "MIT",
+
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "module": "dist/index.mjs",
   "type": "module",
+
   "scripts": {
     "build": "tsc",
-    "prepublishOnly": "npm run build"
+    "clean": "rimraf dist",
+    "dev": "tsc --watch",
+    "prepublishOnly": "npm run clean && npm run build"
   },
+
   "keywords": [
     "discord",
     "discord.js",
     "ui",
     "container",
-    "statuspage"
+    "component",
+    "statuspage",
+    "python-container",
+    "discord-ui"
   ],
+
   "dependencies": {
     "discord.js": "^14.24.2"
   },
+
   "devDependencies": {
-    "typescript": "^5.9.3"
+    "typescript": "^5.9.3",
+    "rimraf": "^5.0.5"
   },
+
   "exports": {
     ".": {
       "types": "./dist/index.d.ts",
@@ -41,9 +53,41 @@
       "require": "./dist/Container.js",
       "default": "./dist/Container.js"
     },
+    "./Item": {
+      "types": "./dist/Item.d.ts",
+      "require": "./dist/Item.js",
+      "default": "./dist/Item.js"
+    },
+    "./TextDisplay": {
+      "types": "./dist/TextDisplay.d.ts",
+      "require": "./dist/TextDisplay.js",
+      "default": "./dist/TextDisplay.js"
+    },
+    "./Separator": {
+      "types": "./dist/Separator.d.ts",
+      "require": "./dist/Separator.js",
+      "default": "./dist/Separator.js"
+    },
+    "./Section": {
+      "types": "./dist/Section.d.ts",
+      "require": "./dist/Section.js",
+      "default": "./dist/Section.js"
+    },
+    "./FileItem": {
+      "types": "./dist/FileItem.d.ts",
+      "require": "./dist/FileItem.js",
+      "default": "./dist/FileItem.js"
+    },
+    "./MediaGallery": {
+      "types": "./dist/MediaGallery.d.ts",
+      "require": "./dist/MediaGallery.js",
+      "default": "./dist/MediaGallery.js"
+    },
     "./package.json": "./package.json"
   },
+
   "funding": "https://yourhoster.at",
+
   "publishConfig": {
     "access": "public"
   }

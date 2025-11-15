@@ -1,26 +1,6 @@
-# discord-container-ui
+# discord-container-ui-port
 
-Ein UI-Toolkit, das den **python-discord Container** in Discord.js/TypeScript nachbildet.
+This package is a TypeScript port of the **discord.py Container UI** (1:1 API surface) for usage with `discord.js` v14.
+It's intended to reproduce the Python API (Container, Item, TextDisplay, Section, Separator, MediaGallery, File) so that existing logic can be ported easily.
 
-## Installation
-
-```
-npm install discord-container-ui
-```
-
-## Nutzung
-
-```ts
-import { Container } from "discord-container-ui";
-
-const c = new Container()
-  .setTitle("Fehler beim Löschen alter DMs")
-  .setIcon("⚠️")
-  .addText("2055: Lost connection to MySQL server at 'panel.shadowra.de:3306'")
-  .addSeparator()
-  .addText("system error: 32 Broken pipe");
-
-channel.send(c.render());
-```
-
-
+> This port focuses on API parity. It implements the same classes & methods as the Python version you provided, but is not a byte-for-byte behavior clone of every discord.py internal.
