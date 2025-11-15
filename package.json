@@ -8,7 +8,7 @@
     "type": "git",
     "url": "git+https://github.com/Inn-Studios/DiscordContainerUI.git"
   },
-  "license": "BSD-3-Clause",
+  "license": "MIT",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "module": "dist/index.mjs",
@@ -45,7 +45,6 @@
   },
   "funding": "https://yourhoster.at",
   "publishConfig": {
-    "access": "public",
-    "provenance": true
+    "access": "public"
   }
 }
