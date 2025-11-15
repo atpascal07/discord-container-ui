@@ -29,6 +29,6 @@ jobs:
       - run: npm run build
 
       # Publish (ohne Tests/Lints), Paket muss schon korrekt versioniert sein
-      - run: npm publish --access public --provenance
+      - run: npm publish 
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
